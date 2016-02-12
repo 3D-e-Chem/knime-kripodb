@@ -1,7 +1,8 @@
 # KripoDB Knime Python templates
 
-[![Build Status](https://travis-ci.org/3D-e-Chem/knime-kripodb.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-kripodb)
+Templates for KripoDB (https://github.com/3D-e-Chem/kripodb) for Python script node in Knime (http://www.knime.org).
 
+[![Build Status](https://travis-ci.org/3D-e-Chem/knime-kripodb.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-kripodb)
 
 # Installation
 
