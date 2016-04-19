@@ -3,7 +3,7 @@
     <parent>
         <artifactId>nl.esciencecenter.e3dchem.kripodb</artifactId>
         <groupId>nl.esciencecenter.e3dchem.kripodb</groupId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
     <artifactId>nl.esciencecenter.e3dchem.kripodb.p2</artifactId>
     <packaging>eclipse-repository</packaging>
