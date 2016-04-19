@@ -3,7 +3,6 @@
 Templates for KripoDB (https://github.com/3D-e-Chem/kripodb) for Python script node in Knime (http://www.knime.org).
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-kripodb.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-kripodb)
-[![DOI](https://zenodo.org/badge/19641/3D-e-Chem/knime-kripodb.svg)](https://zenodo.org/badge/latestdoi/19641/3D-e-Chem/knime-kripodb)
 
 # Installation
 
