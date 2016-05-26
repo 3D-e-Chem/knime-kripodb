@@ -2,7 +2,13 @@
 
 ## Unreleased
 
-## 1.0.1 - 18 Apr 2016
+## 1.0.2 - 2016-05-25
+
+### Added
+
+* Use webservice in template and example (#1)
+
+## 1.0.1 - 2016-04-18
 
 ### Added
 
@@ -12,7 +18,7 @@
 
 * DOI for this repo, see https://github.com/3D-e-Chem/kripodb for DOI.
 
-## 1.0.0 - 12 Feb 2016
+## 1.0.0 - 2016-02-12
 
 ### Added
 
