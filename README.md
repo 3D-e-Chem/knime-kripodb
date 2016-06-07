@@ -23,9 +23,11 @@ Steps to get KripoDB Python templates inside KNIME:
 
 # Usage
 
-See example workflow at [examples/Knime-KripoDB-example.zip](examples/Knime-KripoDB-example.zip).
+See bioisosteric replacement workflow at [examples/KRIPO_bioisosteric_replacement_workflow.zip](examplesKRIPO_bioisosteric_replacement_workflow.zip).
 
-It can be run by importing it into Knime. 
+Or see a minimal example workflow at [examples/Knime-KripoDB-example.zip](examples/Knime-KripoDB-example.zip).
+
+It can be run by importing it into Knime.
 Make sure the Python used by Knime is the same the Python with kripodb package installed.
 
 # Build

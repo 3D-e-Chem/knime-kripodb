@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Added
+
+* bioisosteric replacement workflow
+
 ## 1.0.2 - 2016-05-25
 
 ### Added
