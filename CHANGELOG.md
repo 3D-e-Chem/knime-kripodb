@@ -2,9 +2,15 @@
 
 ## Unreleased
 
+## 1.0.3 - 2016-06-21
+
 ### Added
 
 * bioisosteric replacement workflow
+
+### Fixed
+
+* Example 'Add fragment for hits' node returns too many rows (#2)
 
 ## 1.0.2 - 2016-05-25
 
