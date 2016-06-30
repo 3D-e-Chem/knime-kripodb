@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Changed
+
+* Use KripoDB Knime node instead of Python node with a KripoDB template (#3)
+
 ## 1.0.3 - 2016-06-21
 
 ### Added

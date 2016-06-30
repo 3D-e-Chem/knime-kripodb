@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>nl.esciencecenter.e3dchem.kripodb</groupId>
     <artifactId>nl.esciencecenter.e3dchem.kripodb</artifactId>
-    <version>1.0.3</version>
+    <version>2.0.25</version>
     <packaging>pom</packaging>
 
     <organization>
@@ -16,6 +16,7 @@
         <url>https://github.com/3D-e-Chem/knime-kripodb/</url>
         <connection>scm:git:https://github.com/3D-e-Chem/knime-kripodb.git</connection>
         <developerConnection>scm:git:https://github.com/3D-e-Chem/knime-kripodb.git</developerConnection>
+        <tag>HEAD</tag>
     </scm>
     <issueManagement>
         <system>GitHub</system>
@@ -31,6 +32,7 @@
         <module>plugin</module>
         <module>feature</module>
         <module>p2</module>
+        <module>tests</module>
     </modules>
 
     <prerequisites>
@@ -40,6 +42,7 @@
     <properties>
         <knime.version>3.1</knime.version>
         <knime.update.site>http://update.knime.org/analytics-platform/${knime.version}/</knime.update.site>
+        <knime.community.trusted.update.site>http://update.knime.org/community-contributions/trusted/${knime.version}/</knime.community.trusted.update.site>
         <tycho.version>0.24.0</tycho.version>
         <tycho.extras.version>0.24.0</tycho.extras.version>
         <tycho.test.platformArgs/>
@@ -52,6 +55,11 @@
             <id>knime</id>
             <layout>p2</layout>
             <url>${knime.update.site}</url>
+        </repository>
+        <repository>
+            <id>knime trusted community</id>
+            <layout>p2</layout>
+            <url>${knime.community.trusted.update.site}</url>
         </repository>
     </repositories>
     <build>
