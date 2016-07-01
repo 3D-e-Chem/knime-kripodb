@@ -4,6 +4,17 @@ jdk: oraclejdk8
 cache:  
   directories:  
    - $HOME/.m2
-install: mvn package -B
+   - $HOME/.cache/pip
+   - $HOME/conda
+before_install:
+  - if [ ! -e $HOME/conda/bin/activate ]; then
+    wget -nc https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh;
+    bash $INSTALLER -f -b -p $HOME/conda;
+    fi
+  - source $HOME/conda/bin/activate root
+  - conda install -y -q -c https://conda.anaconda.org/rdkit rdkit pytables pandas coverage sphinx protobuf
+install:
+- pip install git+https://github.com/3D-e-Chem/kripodb.git
+- mvn package -B
 script: mvn verify -B
-  
+
