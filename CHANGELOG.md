@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+## 2.0.0 - 2016-07-06
+
+Version <2.0.0 used Python templates which could be selected as source code and adjusted in a text area in the `Python script` node.
+Version >= 2.0.0 uses KripoDB Knime node which have there own dialog with combo boxes and file pickers.
+
+### Added
+
+* Workflow tests
+* Run workflow tests on Travis-CI
+* Codacy badge
+* Check that Python packages are available before executing
+
+### Changed
+
+* Use KripoDB Knime node instead of Python node with a KripoDB template (#3)
+
 ## 1.0.3 - 2016-06-21
 
 ### Added
