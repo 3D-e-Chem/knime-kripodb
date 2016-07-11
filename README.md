@@ -12,7 +12,7 @@ Requirements:
 * KNIME, https://www.knime.org
 * KripoDB Python package & optional data files, https://github.com/3D-e-Chem/kripodb
 
-Steps to get KripoDB Python templates inside KNIME:
+Steps to get KripoDB nodes inside KNIME:
 
 1. Goto Help > Install new software ... menu
 2. Press add button
@@ -74,7 +74,7 @@ mvn verify
 
 Tests in `tests` module will have been run with results in `test/target/surefire-reports` directory.
 There are unit tests and workflow tests both are executed in the KNIME eclipse application.
-See https://github.com/3D-e-Chem/knime-testflow for more information about workflow tests. 
+See https://github.com/3D-e-Chem/knime-testflow for more information about workflow tests.
 
 ## New release
 

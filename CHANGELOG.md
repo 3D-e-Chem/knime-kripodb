@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 2.0.1 - 2016-07-11
+
+### Changed
+
+* Moved PythonWrapper classes to own repo (https://github.com/3D-e-Chem/knime-python-wrapper)
+
 ## 2.0.0 - 2016-07-06
 
 Version <2.0.0 used Python templates which could be selected as source code and adjusted in a text area in the `Python script` node.
