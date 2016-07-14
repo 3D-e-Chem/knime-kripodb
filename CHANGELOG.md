@@ -5,6 +5,15 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+### Added
+
+* Explained fragments db file choices (#6)
+* Explained similar fragments matrix file options (#5)
+
+### Changed
+
+* Renamed distance to similarity (#9)
+
 ### Removed
 
 * Python templates
