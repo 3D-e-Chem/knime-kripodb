@@ -82,8 +82,14 @@ See https://github.com/3D-e-Chem/knime-testflow for more information about workf
 1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>` command.
 2. Manually update version of "source" feature in `p2/category.xml` file.
 3. Commit and push changes
-3. Create package with `mvn package`, will create update site in `p2/target/repository`
+4. Create package with `mvn package`, will create update site in `p2/target/repository`
+5. Test node by installing it from local update site
 4. Append new release to 3D-e-Chem update site
   1. Make clone of https://github.com/3D-e-Chem/3D-e-Chem.github.io repo
   2. Append release to 3D-e-Chem update site with `mvn install -Dtarget.update.site=<3D-e-Chem repo/updates>`
 5. Commit and push changes in this repo and 3D-e-Chem.github.io repo
+6. Create a Github release
+7. Update Zenodo entry
+  1. Fix authors
+  2. Fix license
+
