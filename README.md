@@ -43,7 +43,7 @@ Steps to get development environment setup:
 1. Download KNIME SDK from https://www.knime.org/downloads/overview
 2. Install/Extract/start KNIME SDK
 3. Start SDK
-4. Install m2e (Maven integration for Eclipse) + KNIME Python Integration + RDKit KNIME integration + KNIME Testing framework
+4. Install m2e (Maven integration for Eclipse) + KNIME Python Integration + RDKit KNIME integration + KNIME Testing framework + 3D-e-Chem node category
 
     1. Goto Help > Install new software ...
     2. Make sure Update site is https://3d-e-chem.github.io/updates ,  http://update.knime.org/analytics-platform/3.1 and http://update.knime.org/community-contributions/trusted/3.1 are in the pull down list otherwise add it
@@ -52,7 +52,8 @@ Steps to get development environment setup:
     5. Select `RDKit KNIME integration`
     6. Select `Abstract Python wrapper KNIME node and helpers`
     7. Select `Test Knime workflows from a Junit test`
-    8. Install software & restart
+    8. Select `Splash & node category for 3D-e-Chem KNIME nodes`
+    9. Install software & restart
 
 5. Import this repo as an Existing Maven project
 
