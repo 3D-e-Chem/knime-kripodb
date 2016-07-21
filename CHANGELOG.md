@@ -5,6 +5,8 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+## [2.1.1] - 2016-07-18
+
 ### Changed
 
 - Nest Kripo nodes under /community/3D-e-Chem (#7)
