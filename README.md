@@ -25,11 +25,11 @@ Steps to get KripoDB nodes inside KNIME:
 
 # Usage
 
-See bioisosteric replacement workflow at [examples/KRIPO_bioisosteric_replacement_workflow.zip](examples/KRIPO_bioisosteric_replacement_workflow.zip).
+See a minimal example workflow at [examples/Knime-KripoDB-example.zip](examples/Knime-KripoDB-example.zip).
+The workflow can be run by importing it into KNIME as an archive.
 
-Or see a minimal example workflow at [examples/Knime-KripoDB-example.zip](examples/Knime-KripoDB-example.zip).
+Other workflows using the KripoDB nodes can be found at https://github.com/3D-e-Chem/workflows
 
-Both workflows can be run by importing it into KNIME.
 Make sure the Python used by KNIME is the same the Python with kripodb package installed.
 
 # Development

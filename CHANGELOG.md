@@ -5,6 +5,12 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+## [2.1.2] - 2016-11-22
+
+### Fixed
+
+- Correct fragments.sqlite url (#14)
+
 ## [2.1.1] - 2016-07-18
 
 ### Changed
