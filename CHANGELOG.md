@@ -9,6 +9,10 @@ Formatted as described on http://keepachangelog.com/
 
 - kripodb Python installation instruction in node description (#16)
 
+### Changed
+
+- Allow fragments db to be a webservice url (#15)
+
 ## [2.1.2] - 2016-11-22
 
 ### Fixed
