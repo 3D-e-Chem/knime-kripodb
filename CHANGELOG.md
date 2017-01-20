@@ -5,6 +5,8 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+## [2.1.3] - 2017-01-20
+
 ### Added
 
 - kripodb Python installation instruction in node description (#16)
