@@ -15,4 +15,4 @@ target
 .classpath
 
 swagger-codegen-cli-*.jar
-client/
+/client
