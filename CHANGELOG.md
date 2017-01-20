@@ -14,6 +14,7 @@ Formatted as described on http://keepachangelog.com/
 ### Changed
 
 - Allow fragments db to be a webservice url (#15)
+- Tests run against mocked web service (#18)
 
 ## [2.1.2] - 2016-11-22
 

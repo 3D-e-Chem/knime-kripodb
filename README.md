@@ -94,3 +94,26 @@ See https://github.com/3D-e-Chem/knime-testflow for more information about workf
   1. Fix authors
   2. Fix license
 
+# Create stub recordings for integration tests
+
+The test workflow are tested against a mocked web server and not the actual http://3d-e-chem.vu-compmedchem.nl/kripodb site.
+The mock server is called [WireMock](http://WireMock.org/) and normally gives empty responses.
+To have WireMock server return filled responses, stubs stored in `tests/src/test/resources/` directory must be provided.
+The stubs can be recorded by starting a WireMock server in recording mode by:
+```
+java -jar tests/lib/wiremock-standalone-2.5.0.jar --proxy-all="http://3d-e-chem.vu-compmedchem.nl/" \
+--port=8089 --record-mappings --verbose --root-dir=tests/src/test/resources/
+java -jar tests/lib/wiremock-standalone-2.5.0.jar --proxy-all="http://localhost:8084/" \
+--port=8089 --record-mappings --verbose --root-dir=tests/src/test/resources/
+```
+
+Then in a KNIME workflow in the KripoDB nodes set the base path to http://localhost:8089.
+Executing the workflow will fetch data from http://3d-e-chem.vu-compmedchem.nl/kripodb  via the WireMock server and cause new stubs to be recorded in the `tests/src/test/resources/` directory.
+
+To run the test workflows from inside KNIME desktop enviroment start the WireMock server in mock mode by:
+
+```
+java -jar tests/lib/wiremock-standalone-2.5.0.jar --port=8089 --verbose --root-dir=tests/src/test/resources/
+```
+Then import the test workflows in `tests/src/knime/` directory, select the workflow in the KNIME explorer and in the context menu (right-click) select `Run as workflow test`.
+
