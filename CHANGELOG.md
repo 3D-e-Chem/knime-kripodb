@@ -5,6 +5,10 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+### Added
+
+- kripodb Python installation instruction in node description (#16)
+
 ## [2.1.2] - 2016-11-22
 
 ### Fixed
