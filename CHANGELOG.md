@@ -10,6 +10,7 @@ Formatted as described on http://keepachangelog.com/
 ### Added
 
 - kripodb Python installation instruction in node description (#16)
+- code coverage (#19)
 
 ### Changed
 

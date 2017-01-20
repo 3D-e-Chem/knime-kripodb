@@ -6,6 +6,7 @@ cache:
    - $HOME/.m2
    - $HOME/.cache/pip
    - $HOME/conda
+   - $HOME/jpm
 before_install:
   - if [ ! -e $HOME/conda/bin/activate ]; then
     wget -nc https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh;
@@ -17,3 +18,7 @@ install:
 - pip install git+https://github.com/3D-e-Chem/kripodb.git
 - mvn package -B
 script: xvfb-run mvn verify -B
+before_cache:
+- wget -nc -O ~/.m2/jpm4j.jar https://github.com/jpm4j/jpm4j.installers/raw/master/dist/biz.aQute.jpm.run.jar
+- java -jar $HOME/.m2/jpm4j.jar -u install com.codacy:codacy-coverage-reporter:assembly
+- $HOME/jpm/bin/codacy-coverage-reporter -l Java -r tests/target/jacoco/report/jacoco.xml
