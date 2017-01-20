@@ -78,6 +78,44 @@ Tests in `tests` module will have been run with results in `test/target/surefire
 There are unit tests and workflow tests both are executed in the KNIME eclipse application.
 See https://github.com/3D-e-Chem/knime-testflow for more information about workflow tests.
 
+# Create web service client
+
+The web service client is generated using [Swagger Code Generator](https://github.com/swagger-api/swagger-codegen) and stored inside `plugin/src/java/nl/esciencecenter/e3dchem/kripodb/ws/client/` directory.
+
+1. Start KripoDB webservice
+```
+kripodb serve data/similarities.frozen.h5 data/fragments.sqlite
+```
+
+2. Download swagger code generator
+```
+wget http://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.2.1/swagger-codegen-cli-2.2.1.jar
+```
+
+3. Generate a client for KripoDB web service
+```
+java -jar swagger-codegen-cli-2.2.1.jar generate \
+--input-spec http://localhost:8084/kripo/swagger.json \
+--output client \
+--lang java \
+--config swagger-codegen.config.json
+```
+
+4. Compile client
+```
+cd client
+mvn package
+```
+
+5. Populate plugin with client source code and dependencies
+```
+mkdir ../plugin/lib
+cp target/lib/gson-* target/lib/logging-interceptor-* target/lib/ok* target/lib/swagger-annotations-* ../plugin/lib/
+cp -r src/main/java/nl/esciencecenter/e3dchem/kripodb/ws/client ../plugin/src/java/nl/esciencecenter/e3dchem/kripodb/ws/
+```
+
+6. Update plugin/META-INF/MANIFEST.MF, plugin/build.properties files to reflect contents of lib/
+
 ## New release
 
 1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>` command.
