@@ -95,6 +95,7 @@ See https://github.com/3D-e-Chem/knime-testflow for more information about workf
   1. Fix authors
   2. Fix license
   3. To Related/alternate identifiers section add http://dx.doi.org/10.1186/1758-2946-6-S1-O26 as `is cited by this upload` entry.
+8. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
 
 # Create stub recordings for integration tests
 
