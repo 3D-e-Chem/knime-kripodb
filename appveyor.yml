@@ -1,0 +1,33 @@
+version: 1.0.{build}
+environment:
+  matrix:
+    - PYTHON_VERSION: 2.7
+      MINICONDA: C:\Miniconda
+    # - PYTHON_VERSION: 3.4
+    #   MINICONDA: C:\Miniconda3
+init:
+- "ECHO %PYTHON_VERSION% %MINICONDA%"
+install:
+- "set PATH=%MINICONDA%;%MINICONDA%\\Scripts;%PATH%"
+- choco install maven -y
+- conda update -y -q -c conda-forge conda
+- conda install -y -q -c rdkit -c conda-forge rdkit pytables pandas coverage sphinx scipy protobuf
+- pip install -U pip
+- pip install git+https://github.com/3D-e-Chem/kripodb.git
+cache:
+  - C:\Users\appveyor\.m2
+# TODO cache conda and pip installs
+build_script:
+- cmd: mvn package -B
+test_script:
+- cmd: mvn verify -B
+artifacts:
+- path: p2\target\*.zip
+  name: Update site
+on_finish:
+- ps: >-
+    $url = "https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)"
+
+    Get-ChildItem "tests/target/surefire-reports/" -Filter *.xml | Foreach-Object{
+        (New-Object 'System.Net.WebClient').UploadFile($url, $_.FullName)
+    }
