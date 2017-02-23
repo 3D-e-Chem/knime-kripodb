@@ -68,11 +68,6 @@
 			<layout>p2</layout>
 			<url>https://3d-e-chem.github.io/updates</url>
 		</repository>
-		<repository>
-			<id>local-python</id>
-			<layout>p2</layout>
-			<url>file:///home/verhoes/git/knime-python-wrapper/p2/target/repository</url>
-		</repository>
 	</repositories>
 	<build>
 		<plugins>
