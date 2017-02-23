@@ -5,6 +5,13 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+Requires KripoDB v2.2.0 or higher.
+
+### Added
+
+- Fragment information node fails completely when just one of the fragment ids is wrong (#11)
+- Fragment similarity node gives warnings for query fragment ids that can not be found
+
 ## [2.1.3] - 2017-01-20
 
 ### Added
