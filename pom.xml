@@ -158,10 +158,10 @@
 						</dependency>
 					</dependencies>
 					<configuration>
-						<timestampProvider>jgit</timestampProvider>
 						<sourceReferences>
 							<generate>true</generate>
 						</sourceReferences>
+						<format>'v'yyyyMMddHHmm</format>
 					</configuration>
 				</plugin>
 			</plugins>

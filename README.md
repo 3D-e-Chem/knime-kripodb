@@ -13,7 +13,12 @@
 Requirements:
 
 * KNIME, https://www.knime.org
-* KripoDB Python package & optional data files, https://github.com/3D-e-Chem/kripodb
+
+Optionally:
+
+* KripoDB Python package & data files, https://github.com/3D-e-Chem/kripodb,
+  required when nodes which use local Kripo files are used.
+  Nodes which talk to web service work without the KripoDB Python package.
 
 Steps to get KripoDB nodes inside KNIME:
 
