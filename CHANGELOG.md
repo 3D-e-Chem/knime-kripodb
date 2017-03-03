@@ -5,6 +5,31 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+## [2.1.5] - 2017-03-01
+
+Requires KripoDB v2.2.0 or higher.
+
+### Added
+
+- Fragment information node fails completely when just one of the fragment ids is wrong (#11)
+- Fragment similarity node gives warnings for query fragment ids that can not be found
+
+## [2.1.4]
+
+Retracted due to unresolved compilation problems.
+
+## [2.1.3] - 2017-01-20
+
+### Added
+
+- kripodb Python installation instruction in node description (#16)
+- code coverage (#19)
+
+### Changed
+
+- Allow fragments db to be a webservice url (#15)
+- Tests run against mocked web service (#18)
+
 ## [2.1.2] - 2016-11-22
 
 ### Fixed

@@ -3,7 +3,9 @@
 [KNIME](http://www.knime.org) nodes for KripoDB (https://github.com/3D-e-Chem/kripodb).
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-kripodb.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-kripodb)
+[![Build status](https://ci.appveyor.com/api/projects/status/3way61l0ojtbhcrv?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/knime-kripodb)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bde4d072a1874e7abae252b1e46a9c3a)](https://www.codacy.com/app/3D-e-Chem/knime-kripodb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=3D-e-Chem/knime-kripodb&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/bde4d072a1874e7abae252b1e46a9c3a)](https://www.codacy.com/app/3D-e-Chem/knime-kripodb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=3D-e-Chem/knime-kripodb&amp;utm_campaign=Badge_Coverage)
 [![DOI](https://zenodo.org/badge/19641/3D-e-Chem/knime-kripodb.svg)](https://zenodo.org/badge/latestdoi/19641/3D-e-Chem/knime-kripodb)
 
 # Installation
@@ -46,7 +48,7 @@ Steps to get development environment setup:
 4. Install m2e (Maven integration for Eclipse) + KNIME Python Integration + RDKit KNIME integration + KNIME Testing framework + 3D-e-Chem node category
 
     1. Goto Help > Install new software ...
-    2. Make sure Update site is https://3d-e-chem.github.io/updates ,  http://update.knime.org/analytics-platform/3.1 and http://update.knime.org/community-contributions/trusted/3.1 are in the pull down list otherwise add it
+    2. Make sure Update site is https://3d-e-chem.github.io/updates , http://download.eclipse.org/releases/neon/ ,  http://update.knime.org/analytics-platform/3.1 and http://update.knime.org/community-contributions/trusted/3.1 are in the pull down list otherwise add it
     3. Select --all sites-- in work with pulldown
     4. Select m2e (Maven integration for Eclipse)
     5. Select `RDKit KNIME integration`
@@ -131,4 +133,28 @@ cp -r src/main/java/nl/esciencecenter/e3dchem/kripodb/ws/client ../plugin/src/ja
 7. Update Zenodo entry
   1. Fix authors
   2. Fix license
+  3. To Related/alternate identifiers section add http://dx.doi.org/10.1186/1758-2946-6-S1-O26 as `is cited by this upload` entry.
+8. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
 
+# Create stub recordings for integration tests
+
+The test workflow are tested against a mocked web server and not the actual http://3d-e-chem.vu-compmedchem.nl/kripodb site.
+The mock server is called [WireMock](http://WireMock.org/) and normally gives empty responses.
+To have WireMock server return filled responses, stubs stored in `tests/src/test/resources/` directory must be provided.
+The stubs can be recorded by starting a WireMock server in recording mode by:
+```
+java -jar tests/lib/wiremock-standalone-2.5.0.jar --proxy-all="http://3d-e-chem.vu-compmedchem.nl/" \
+--port=8089 --record-mappings --verbose --root-dir=tests/src/test/resources/
+java -jar tests/lib/wiremock-standalone-2.5.0.jar --proxy-all="http://localhost:8084/" \
+--port=8089 --record-mappings --verbose --root-dir=tests/src/test/resources/
+```
+
+Then in a KNIME workflow in the KripoDB nodes set the base path to http://localhost:8089.
+Executing the workflow will fetch data from http://3d-e-chem.vu-compmedchem.nl/kripodb  via the WireMock server and cause new stubs to be recorded in the `tests/src/test/resources/` directory.
+
+To run the test workflows from inside KNIME desktop enviroment start the WireMock server in mock mode by:
+
+```
+java -jar tests/lib/wiremock-standalone-2.5.0.jar --port=8089 --verbose --root-dir=tests/src/test/resources/
+```
+Then import the test workflows in `tests/src/knime/` directory, select the workflow in the KNIME explorer and in the context menu (right-click) select `Run as workflow test`.
