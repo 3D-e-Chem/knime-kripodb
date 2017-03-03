@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="nl.esciencecenter.e3dchem.kripodb.feature"
-      label="KripoDB nodes for Knime"
+      label="KripoDB nodes for KNIME"
       version="2.1.6.qualifier"
       provider-name="Netherlands eScience Center">
 
    <description url="https://github.com/3D-e-Chem/knime-kripodb">
-      Knimes nodes for interacting with Kripo data files.
+      KNIME nodes for interacting with Kripo data files.
    </description>
 
    <copyright url="https://www.esciencecenter.nl">
