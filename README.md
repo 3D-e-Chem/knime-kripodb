@@ -1,5 +1,7 @@
 # KripoDB KNIME nodes
 
+KRIPO stands for [Key Representation of Interaction in POckets](http://dx.doi.org/10.1186/1758-2946-6-S1-O26).
+
 [KNIME](http://www.knime.org) nodes for KripoDB (https://github.com/3D-e-Chem/kripodb).
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-kripodb.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-kripodb)
@@ -13,7 +15,12 @@
 Requirements:
 
 * KNIME, https://www.knime.org
-* KripoDB Python package & optional data files, https://github.com/3D-e-Chem/kripodb
+
+Optionally:
+
+* KripoDB Python package & data files, https://github.com/3D-e-Chem/kripodb,
+  required when nodes which use local Kripo files are used.
+  Nodes which talk to web service work without the KripoDB Python package.
 
 Steps to get KripoDB nodes inside KNIME:
 
@@ -80,23 +87,60 @@ Tests in `tests` module will have been run with results in `test/target/surefire
 There are unit tests and workflow tests both are executed in the KNIME eclipse application.
 See https://github.com/3D-e-Chem/knime-testflow for more information about workflow tests.
 
+# Create web service client
+
+The web service client is generated using [Swagger Code Generator](https://github.com/swagger-api/swagger-codegen) and stored inside `plugin/src/java/nl/esciencecenter/e3dchem/kripodb/ws/client/` directory.
+
+1. Start KripoDB webservice
+```
+kripodb serve data/similarities.frozen.h5 data/fragments.sqlite
+```
+
+2. Download swagger code generator
+```
+wget http://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.2.2/swagger-codegen-cli-2.2.2.jar
+```
+
+3. Generate a client for KripoDB web service
+```
+java -jar swagger-codegen-cli-2.2.2.jar generate \
+--input-spec http://localhost:8084/kripo/swagger.json \
+--output client \
+--lang java \
+--config swagger-codegen.config.json
+```
+
+4. Compile client
+```
+cd client
+mvn package
+```
+
+5. Populate plugin with client source code and dependencies
+```
+mkdir ../plugin/lib
+cp target/lib/gson-* target/lib/logging-interceptor-* target/lib/ok* target/lib/swagger-annotations-* ../plugin/lib/
+cp -r src/main/java/nl/esciencecenter/e3dchem/kripodb/ws/client ../plugin/src/java/nl/esciencecenter/e3dchem/kripodb/ws/
+```
+
+6. Update plugin/META-INF/MANIFEST.MF, plugin/build.properties files to reflect contents of lib/
+
 ## New release
 
-1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>` command.
-2. Manually update version of "source" feature in `p2/category.xml` file.
-3. Commit and push changes
-4. Create package with `mvn package`, will create update site in `p2/target/repository`
-5. Test node by installing it from local update site
-4. Append new release to 3D-e-Chem update site
+1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>-SNAPSHOT` command.
+2. Commit and push changes
+3. Create package with `mvn package`, will create update site in `p2/target/repository`
+4. Test node by installing it from local update site
+5. Append new release to 3D-e-Chem update site
   1. Make clone of https://github.com/3D-e-Chem/3D-e-Chem.github.io repo
   2. Append release to 3D-e-Chem update site with `mvn install -Dtarget.update.site=<3D-e-Chem repo/updates>`
-5. Commit and push changes in this repo and 3D-e-Chem.github.io repo
-6. Create a Github release
-7. Update Zenodo entry
+6. Commit and push changes in this repo and 3D-e-Chem.github.io repo
+7. Create a Github release
+8. Update Zenodo entry
   1. Fix authors
   2. Fix license
   3. To Related/alternate identifiers section add http://dx.doi.org/10.1186/1758-2946-6-S1-O26 as `is cited by this upload` entry.
-8. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
+9. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
 
 # Create stub recordings for integration tests
 

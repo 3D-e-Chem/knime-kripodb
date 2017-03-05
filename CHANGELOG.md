@@ -5,6 +5,16 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+## [2.2.0] - 2017-03-05
+
+### Added
+
+- Pure Java nodes to fetch fragment information and similarites from web service (#17) 
+
+## Changed
+
+- Python nodes only work for local files, no longer for web service urls
+
 ## [2.1.5] - 2017-03-01
 
 Requires KripoDB v2.2.0 or higher.
