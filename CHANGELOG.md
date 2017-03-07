@@ -5,6 +5,12 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+## [2.2.1] - 2017-03-07
+
+### Fixes
+
+- Handle nulls in server responses (#23)
+
 ## [2.2.0] - 2017-03-05
 
 ### Added
