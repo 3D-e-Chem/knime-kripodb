@@ -5,6 +5,11 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+### Added
+
+- Node to fetch pharmacophore from local db file (#12)
+- Node to fetch pharmacophore from webservice (#12)
+
 ## [2.2.1] - 2017-03-07
 
 ### Fixes
