@@ -93,7 +93,7 @@ The web service client is generated using [Swagger Code Generator](https://githu
 
 1. Start KripoDB webservice
 ```
-kripodb serve data/similarities.frozen.h5 data/fragments.sqlite
+kripodb serve data/similarities.frozen.h5 data/fragments.sqlite data/pharmacophores.h5
 ```
 
 2. Download swagger code generator
