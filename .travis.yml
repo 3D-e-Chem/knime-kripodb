@@ -18,7 +18,7 @@ before_install:
 install:
 - pip install git+https://github.com/3D-e-Chem/kripodb.git
 - mvn package -B
-script: xvfb-run mvn verify -B -X
+script: xvfb-run mvn verify -B
 before_cache:
 - wget -nc -O ~/.m2/codacy-coverage-reporter.jar https://github.com/codacy/codacy-coverage-reporter/releases/download/2.0.0/codacy-coverage-reporter-2.0.0-assembly.jar
 - java -jar $HOME/.m2/codacy-coverage-reporter.jar com.codacy.CodacyCoverageReporter -l Java -r tests/target/jacoco/report/jacoco.xml
