@@ -10,6 +10,10 @@ Formatted as described on http://keepachangelog.com/
 - Node to fetch pharmacophore from local db file (#12)
 - Node to fetch pharmacophore from webservice (#12)
 
+### Changed
+
+- Require KNIME 3.3
+
 ## [2.2.1] - 2017-03-07
 
 ### Fixes
