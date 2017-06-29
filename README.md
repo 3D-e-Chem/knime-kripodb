@@ -120,6 +120,7 @@ mvn package
 ```
 mkdir ../plugin/lib
 cp target/lib/gson-* target/lib/logging-interceptor-* target/lib/ok* target/lib/swagger-annotations-* ../plugin/lib/
+rm -r ../plugin/src/java/nl/esciencecenter/e3dchem/kripodb/ws/client
 cp -r src/main/java/nl/esciencecenter/e3dchem/kripodb/ws/client ../plugin/src/java/nl/esciencecenter/e3dchem/kripodb/ws/
 ```
 

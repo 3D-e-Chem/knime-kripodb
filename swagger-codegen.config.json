@@ -4,7 +4,7 @@
   "invokerPackage": "nl.esciencecenter.e3dchem.kripodb.ws.client",
   "groupId": "nl.esciencecenter.e3dchem.kripodb.ws",
   "artifactId": "nl.esciencecenter.e3dchem.kripodb.ws.client",
-  "artifactVersion": "2.0.0",
+  "artifactVersion": "2.4.0",
   "serializableModel": true,
   "hideGenerationTimestamp": "nl.esciencecenter.e3dchem.kripodb.ws.client",
   "dateLibrary": "java8",
