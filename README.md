@@ -98,12 +98,12 @@ kripodb serve data/similarities.frozen.h5 data/fragments.sqlite data/pharmacopho
 
 2. Download swagger code generator
 ```
-wget http://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.2.2/swagger-codegen-cli-2.2.2.jar
+wget http://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.2.3/swagger-codegen-cli-2.2.3.jar
 ```
 
 3. Generate a client for KripoDB web service
 ```
-java -jar swagger-codegen-cli-2.2.2.jar generate \
+java -jar swagger-codegen-cli-2.2.3.jar generate \
 --input-spec http://localhost:8084/kripo/swagger.json \
 --output client \
 --lang java \
