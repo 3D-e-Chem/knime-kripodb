@@ -5,6 +5,8 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+## [2.3.0] - 2017-07-21
+
 ### Added
 
 - Node to fetch pharmacophore from local db file (#12)
