@@ -14,7 +14,7 @@ before_install:
     bash Miniconda3-latest-Linux-x86_64.sh -f -b -p $HOME/conda;
     fi
   - source $HOME/conda/bin/activate root
-  - conda install -y -q -c conda-forge -c rdkit rdkit pytables pandas==0.19.2 coverage sphinx protobuf
+  - conda install -y -q -c conda-forge -c rdkit rdkit pytables coverage sphinx protobuf
 install:
 - pip install git+https://github.com/3D-e-Chem/kripodb.git
 - mvn package -B
