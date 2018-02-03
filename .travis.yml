@@ -1,5 +1,4 @@
 sudo: false  
-dist: trusty
 language: java    
 jdk: oraclejdk8
 cache:  
@@ -7,7 +6,7 @@ cache:
    - $HOME/.m2
    - $HOME/.cache/pip
    - $HOME/conda
-   - $HOME/jpm
+   - $HOME/.sonar/cache
 before_install:
   - if [ ! -e $HOME/conda/bin/activate ]; then
     wget -nc https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh;
@@ -19,6 +18,5 @@ install:
 - pip install git+https://github.com/3D-e-Chem/kripodb.git
 - mvn package -B
 script: xvfb-run mvn verify -B
-before_cache:
-- wget -nc -O ~/.m2/codacy-coverage-reporter.jar https://github.com/codacy/codacy-coverage-reporter/releases/download/2.0.0/codacy-coverage-reporter-2.0.0-assembly.jar
-- java -jar $HOME/.m2/codacy-coverage-reporter.jar com.codacy.CodacyCoverageReporter -l Java -r tests/target/jacoco/report/jacoco.xml
+after_success:
+ - mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN

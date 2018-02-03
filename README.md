@@ -8,6 +8,8 @@ KRIPO stands for [Key Representation of Interaction in POckets](http://dx.doi.or
 [![Build status](https://ci.appveyor.com/api/projects/status/3way61l0ojtbhcrv?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/knime-kripodb)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bde4d072a1874e7abae252b1e46a9c3a)](https://www.codacy.com/app/3D-e-Chem/knime-kripodb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=3D-e-Chem/knime-kripodb&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/bde4d072a1874e7abae252b1e46a9c3a)](https://www.codacy.com/app/3D-e-Chem/knime-kripodb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=3D-e-Chem/knime-kripodb&amp;utm_campaign=Badge_Coverage)
+[![SonarCloud Gate](https://sonarcloud.io/api/badges/gate?key=nl.esciencecenter.e3dchem.kripodb:nl.esciencecenter.e3dchem.kripodb)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb)
+[![SonarCloud Coverage](https://sonarcloud.io/api/badges/measure?key=nl.esciencecenter.e3dchem.kripodb:nl.esciencecenter.e3dchem.kripodb&metric=coverage)](https://sonarcloud.io/component_measures/domain/Coverage?id=nl.esciencecenter.e3dchem.kripodb:nl.esciencecenter.e3dchem.kripodb)
 [![DOI](https://zenodo.org/badge/19641/3D-e-Chem/knime-kripodb.svg)](https://zenodo.org/badge/latestdoi/19641/3D-e-Chem/knime-kripodb)
 
 # Installation
