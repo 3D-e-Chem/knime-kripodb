@@ -5,6 +5,11 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+### Changed
+
+- Allow Python node to use Pyhon 2 or 3
+- Require KNIME 3.5
+
 ## [2.3.0] - 2017-07-21
 
 ### Added
