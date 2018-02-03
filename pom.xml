@@ -52,6 +52,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<tycho.scmUrl>scm:git:https://github.com/3D-e-Chem/knime-kripodb.git</tycho.scmUrl>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.organization>3d-e-chem</sonar.organization>
 	</properties>
 	<repositories>
 		<repository>
@@ -181,6 +183,7 @@
 						</dependency>
 					</dependencies>
 					<configuration>
+						<timestampProvider>jgit</timestampProvider>
 						<sourceReferences>
 							<generate>true</generate>
 						</sourceReferences>
@@ -201,6 +204,46 @@
 			<properties>
 				<tycho.test.platformArgs>-XstartOnFirstThread</tycho.test.platformArgs>
 			</properties>
+		</profile>
+		<profile>
+			<id>source-feature</id>
+			<activation>
+				<file>
+					<exists>feature.xml</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.tycho.extras</groupId>
+						<artifactId>tycho-source-feature-plugin</artifactId>
+						<version>${tycho.extras.version}</version>
+						<executions>
+							<execution>
+								<id>source-feature</id>
+								<phase>package</phase>
+								<goals>
+									<goal>source-feature</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.eclipse.tycho</groupId>
+						<artifactId>tycho-p2-plugin</artifactId>
+						<version>${tycho.version}</version>
+						<executions>
+							<execution>
+								<id>attach-p2-metadata</id>
+								<phase>package</phase>
+								<goals>
+									<goal>p2-metadata</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
 </project>
