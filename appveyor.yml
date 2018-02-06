@@ -3,13 +3,13 @@ environment:
   matrix:
     - PYTHON_VERSION: 3.6
       MINICONDA: C:\Miniconda3-x64
-    # - PYTHON_VERSION: 3.4
-    #   MINICONDA: C:\Miniconda3-x64
 init:
 - "ECHO %PYTHON_VERSION% %MINICONDA%"
 install:
 - "set PATH=%MINICONDA%;%MINICONDA%\\Scripts;%PATH%"
 - conda install -y -q -c rdkit -c conda-forge rdkit pytables coverage sphinx scipy protobuf
+# KNIME defaults to python3 as executable, but conda only has python.exe, create python3 so tests can use it
+- copy /Y %MINICONDA%\python.exe %MINICONDA%\python3.exe
 - pip install git+https://github.com/3D-e-Chem/kripodb.git
 cache:
   - C:\Users\appveyor\.m2
