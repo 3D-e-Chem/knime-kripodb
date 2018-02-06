@@ -5,9 +5,11 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+## [2.4.0] - 2018-02-06
+
 ### Changed
 
-- Allow Python node to use Python 2 or 3
+- Allow KripoDB local nodes to use Python 2 or 3
 - Require KNIME 3.5
 
 ## [2.3.0] - 2017-07-21
