@@ -5,6 +5,8 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+## [2.4.0] - 2018-02-07
+
 ### Changed
 
 - Allow Python node to use Python 2 or 3
