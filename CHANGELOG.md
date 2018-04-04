@@ -5,9 +5,11 @@ Formatted as described on http://keepachangelog.com/
 
 ## Unreleased
 
+## [2.4.1] - 2018-04-04
+
 ### Fixed
 
-- Last update of webservice in node description [#28]
+- Last update of web service in node description [#28]
 
 ## [2.4.0] - 2018-02-07
 
