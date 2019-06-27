@@ -1,9 +1,15 @@
-# Change log
+# Change Log
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
-Formatted as described on http://keepachangelog.com/
+The file is formatted as described on http://keepachangelog.com/.
 
 ## Unreleased
+
+## [2.4.2] - 2019-06-27
+
+### Changed
+
+- Requires KNIME 4.0 ([#29](https://github.com/3D-e-Chem/knime-kripodb/issues/29))
 
 ## [2.4.1] - 2018-04-04
 
