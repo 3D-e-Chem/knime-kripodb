@@ -6,15 +6,15 @@ KRIPO stands for [Key Representation of Interaction in POckets](http://dx.doi.or
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-kripodb.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-kripodb)
 [![Build status](https://ci.appveyor.com/api/projects/status/3way61l0ojtbhcrv?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/knime-kripodb)
-[![SonarCloud Gate](https://sonarcloud.io/api/badges/gate?key=nl.esciencecenter.e3dchem.kripodb:nl.esciencecenter.e3dchem.kripodb)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb)
-[![SonarCloud Coverage](https://sonarcloud.io/api/badges/measure?key=nl.esciencecenter.e3dchem.kripodb:nl.esciencecenter.e3dchem.kripodb&metric=coverage)](https://sonarcloud.io/component_measures/domain/Coverage?id=nl.esciencecenter.e3dchem.kripodb:nl.esciencecenter.e3dchem.kripodb)
-[![DOI](https://zenodo.org/badge/19641/3D-e-Chem/knime-kripodb.svg)](https://zenodo.org/badge/latestdoi/19641/3D-e-Chem/knime-kripodb)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb&metric=alert_status)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb&metric=coverage)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1212224.svg)](https://doi.org/10.5281/zenodo.1212224)
 
 # Installation
 
 Requirements:
 
-* KNIME, https://www.knime.org
+* KNIME, https://www.knime.org, version 4.0 or higher
 
 Optionally:
 
@@ -47,24 +47,13 @@ Development requirements:
 
 * Maven, https://maven.apache.org
 
-Steps to get development environment setup:
+Steps to get development environment setup based on https://github.com/knime/knime-sdk-setup#sdk-setup:
 
-1. Download KNIME SDK from https://www.knime.org/downloads/overview
-2. Install/Extract/start KNIME SDK
-3. Start SDK
-4. Install m2e (Maven integration for Eclipse) + KNIME Python Integration + RDKit KNIME integration + KNIME Testing framework + 3D-e-Chem node category
-
-    1. Goto Help > Install new software ...
-    2. Make sure Update site is https://3d-e-chem.github.io/updates , http://download.eclipse.org/releases/neon/ ,  http://update.knime.org/analytics-platform/3.1 and http://update.knime.org/community-contributions/trusted/3.1 are in the pull down list otherwise add it
-    3. Select --all sites-- in work with pulldown
-    4. Select m2e (Maven integration for Eclipse)
-    5. Select `RDKit KNIME integration`
-    6. Select `Abstract Python wrapper KNIME node and helpers`
-    7. Select `Test Knime workflows from a Junit test`
-    8. Select `Splash & node category for 3D-e-Chem KNIME nodes`
-    9. Install software & restart
-
-5. Import this repo as an Existing Maven project
+1. Install Java 8
+2. Install Eclipse for [RCP and RAP developers](https://www.eclipse.org/downloads/packages/release/2018-12/r/eclipse-ide-rcp-and-rap-developers)
+3. Configure Java 8 inside Eclipse Window > Preferences > Java > Installed JREs
+4. Import this repo as an Existing Maven project
+5. Activate target platform by going to Window > Preferences > Plug-in Development > Target Platform and check the `KNIME Analytics Platform (4.0) - nl.esciencecenter.e3dchem.kripodb.targetplatform/KNIME-AP-4.0.target` target definition.
 
 During import the Tycho Eclipse providers must be installed.
 
@@ -138,10 +127,10 @@ cp -r src/main/java/nl/esciencecenter/e3dchem/kripodb/ws/client ../plugin/src/ja
 6. Commit and push changes in this repo and 3D-e-Chem.github.io repo
 7. Create a Github release
 8. Update Zenodo entry
-  1. Fix authors
-  2. Fix license
-  3. To Related/alternate identifiers section add http://dx.doi.org/10.1186/1758-2946-6-S1-O26 as `is cited by this upload` entry.
+  1. Correct authors
+  2. To Related/alternate identifiers section add http://dx.doi.org/10.1186/1758-2946-6-S1-O26 as `is cited by this upload` entry.
 9. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
+10. Update CITIATION.cff with new DOI
 
 # Create stub recordings for integration tests
 
