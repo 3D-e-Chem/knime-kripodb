@@ -15,6 +15,7 @@
 <unit id="org.knime.features.xml.feature.group" version="0.0.0"/>
 <unit id="org.knime.features.chem.types.feature.group" version="0.0.0"/>
 <unit id="org.knime.features.python2.feature.group" version="0.0.0"/>
+<unit id="org.knime.features.ext.chromium.feature.group" version="0.0.0"/>
 <unit id="org.knime.targetPlatform.feature.group" version="0.0.0"/>
 <repository location="https://update.knime.org/analytics-platform/4.0/"/>
 </location>
@@ -23,6 +24,7 @@
 		<unit id="nl.esciencecenter.e3dchem.plugin" version="0.0.0"/>
 		<unit id="nl.esciencecenter.e3dchem.python.plugin" version="0.0.0"/>
 		<unit id="nl.esciencecenter.e3dchem.knime.pharmacophore.plugin" version="0.0.0"/>
+		<unit id="nl.esciencecenter.e3dchem.knime.molviewer.plugin" version="0.0.0"/>
 		<repository location="https://3d-e-chem.github.io/updates"/>
 	</location>
 	<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">

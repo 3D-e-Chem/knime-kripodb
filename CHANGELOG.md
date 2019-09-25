@@ -5,6 +5,12 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## Unreleased
 
+## [2.5.0] - 2019-09-25
+
+### Deprecated
+
+- Python based nodes in favour of web service nodes ([#25](https://github.com/3D-e-Chem/knime-kripodb/issues/25))
+
 ## [2.4.2] - 2019-07-02
 
 ### Changed

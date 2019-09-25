@@ -19,8 +19,7 @@ Requirements:
 Optionally:
 
 * KripoDB Python package & data files, https://github.com/3D-e-Chem/kripodb,
-  required when nodes which use local Kripo files are used.
-  Nodes which talk to web service work without the KripoDB Python package.
+  required to start local running kripo web service instead of the public [one](http://3d-e-chem.vu-compmedchem.nl/kripodb/ui).
 
 Steps to get KripoDB nodes inside KNIME:
 
@@ -39,8 +38,6 @@ The workflow can be run by importing it into KNIME as an archive.
 
 Other workflows using the KripoDB nodes can be found at https://github.com/3D-e-Chem/workflows
 
-Make sure the Python used by KNIME is the same the Python with kripodb package installed.
-
 # Development
 
 Development requirements:
@@ -54,6 +51,7 @@ Steps to get development environment setup based on https://github.com/knime/kni
 3. Configure Java 8 inside Eclipse Window > Preferences > Java > Installed JREs
 4. Import this repo as an Existing Maven project
 5. Activate target platform by going to Window > Preferences > Plug-in Development > Target Platform and check the `KNIME Analytics Platform (4.0) - nl.esciencecenter.e3dchem.kripodb.targetplatform/KNIME-AP-4.0.target` target definition.
+6. A KNIME Analytics Platform instance can be started by right clicking on the `targetplatform/KNIME\ Analytics\ Platform.launch` file and selecting `Run As → KNIME Analytics Platform`. The KNIME instance will contain the target platform together with all extensions defined in the workspace.
 
 During import the Tycho Eclipse providers must be installed.
 
