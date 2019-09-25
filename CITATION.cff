@@ -3,7 +3,7 @@
 cff-version: 1.0.3
 message: If you use this software, please cite it as below.
 title: KNIME node for Key Representation of Interaction in POckets (KRIPO)
-doi: 10.5281/zenodo.3266050
+doi: 10.5281/zenodo.597262
 authors:
 - given-names: Stefan
   family-names: Verhoeven

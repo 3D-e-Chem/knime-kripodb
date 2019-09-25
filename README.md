@@ -8,7 +8,7 @@ KRIPO stands for [Key Representation of Interaction in POckets](http://dx.doi.or
 [![Build status](https://ci.appveyor.com/api/projects/status/3way61l0ojtbhcrv?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/knime-kripodb)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb&metric=alert_status)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb&metric=coverage)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1212224.svg)](https://doi.org/10.5281/zenodo.1212224)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597262.svg)](https://doi.org/10.5281/zenodo.597262)
 
 # Installation
 
