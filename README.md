@@ -19,8 +19,7 @@ Requirements:
 Optionally:
 
 * KripoDB Python package & data files, https://github.com/3D-e-Chem/kripodb,
-  required when nodes which use local Kripo files are used.
-  Nodes which talk to web service work without the KripoDB Python package.
+  required to start local running kripo web service instead of the public [one](http://3d-e-chem.vu-compmedchem.nl/kripodb/ui).
 
 Steps to get KripoDB nodes inside KNIME:
 
@@ -38,8 +37,6 @@ See a minimal example workflow at [examples/Knime-KripoDB-example.zip](examples/
 The workflow can be run by importing it into KNIME as an archive.
 
 Other workflows using the KripoDB nodes can be found at https://github.com/3D-e-Chem/workflows
-
-Make sure the Python used by KNIME is the same the Python with kripodb package installed.
 
 # Development
 
