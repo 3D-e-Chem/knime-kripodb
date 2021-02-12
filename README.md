@@ -4,8 +4,7 @@ KRIPO stands for [Key Representation of Interaction in POckets](http://dx.doi.or
 
 [KNIME](http://www.knime.org) nodes for KripoDB (https://github.com/3D-e-Chem/kripodb).
 
-[![Build Status](https://travis-ci.org/3D-e-Chem/knime-kripodb.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-kripodb)
-[![Build status](https://ci.appveyor.com/api/projects/status/3way61l0ojtbhcrv?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/knime-kripodb)
+[![Java CI with Maven](https://github.com/3D-e-Chem/knime-kripodb/workflows/Java%20CI%20with%20Maven/badge.svg)](https://github.com/3D-e-Chem/knime-kripodb/actions?query=workflow%3A%22Java+CI+with+Maven%22)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb&metric=alert_status)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb&metric=coverage)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597262.svg)](https://doi.org/10.5281/zenodo.597262)
@@ -57,7 +56,7 @@ During import the Tycho Eclipse providers must be installed.
 
 ## Build
 
-```
+```shell
 mvn package
 ```
 
@@ -66,7 +65,7 @@ An Eclipse update site will be made in `p2/target/repository` repository.
 
 ## Tests
 
-```
+```shell
 mvn verify
 ```
 
@@ -78,21 +77,21 @@ See https://github.com/3D-e-Chem/knime-testflow for more information about workf
 
 The web service client is generated using [Swagger Code Generator](https://github.com/swagger-api/swagger-codegen) and stored inside `plugin/src/java/nl/esciencecenter/e3dchem/kripodb/ws/client/` directory.
 
-1. Start KripoDB webservice
+1. Start [KripoDB webservice](https://github.com/3D-e-Chem/kripodb#web-service)
 
-```
+```shell
 kripodb serve data/similarities.frozen.h5 data/fragments.sqlite data/pharmacophores.h5
 ```
 
 2. Download swagger code generator
 
-```
+```shell
 wget http://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.2.3/swagger-codegen-cli-2.2.3.jar
 ```
 
 3. Generate a client for KripoDB web service
 
-```
+```shell
 java -jar swagger-codegen-cli-2.2.3.jar generate \
 --input-spec http://localhost:8084/kripo/swagger.json \
 --output client \
@@ -102,14 +101,14 @@ java -jar swagger-codegen-cli-2.2.3.jar generate \
 
 4. Compile client
 
-```
+```shell
 cd client
 mvn package
 ```
 
 5. Populate plugin with client source code and dependencies
 
-```
+```shell
 mkdir ../plugin/lib
 cp target/lib/gson-* target/lib/logging-interceptor-* target/lib/ok* target/lib/swagger-annotations-* ../plugin/lib/
 rm -r ../plugin/src/java/nl/esciencecenter/e3dchem/kripodb/ws/client
@@ -154,7 +153,7 @@ Executing the workflow will fetch data from http://3d-e-chem.vu-compmedchem.nl/k
 
 To run the test workflows from inside KNIME desktop enviroment start the WireMock server in mock mode by:
 
-```
+```shell
 java -jar tests/lib/wiremock-standalone-2.5.0.jar --port=8089 --verbose --root-dir=tests/src/test/resources/
 ```
 
