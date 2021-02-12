@@ -1,9 +1,14 @@
 # Change Log
+
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 The file is formatted as described on http://keepachangelog.com/.
 
 ## Unreleased
+
+## Removed
+
+- Python based nodes in favour of web service nodes ([#25](https://github.com/3D-e-Chem/knime-kripodb/issues/25))
 
 ## [2.5.0] - 2019-09-25
 
@@ -51,7 +56,7 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ### Added
 
-- Pure Java nodes to fetch fragment information and similarites from web service (#17) 
+- Pure Java nodes to fetch fragment information and similarites from web service (#17)
 
 ## Changed
 
@@ -94,7 +99,7 @@ Retracted due to unresolved compilation problems.
 
 - Nest Kripo nodes under /community/3D-e-Chem (#7)
 
-## [2.1.0] - 2016-07-14 
+## [2.1.0] - 2016-07-14
 
 ### Added
 
@@ -163,3 +168,17 @@ Version >= 2.0.0 uses KripoDB Knime node which have there own dialog with combo 
 
 - Python templates to use KripoDB package
 - Example workflow on Github repo.
+
+[unreleased]: https://github.com/3D-e-Chem/knime-kripodb/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v0.3.0...v1.0.0
+[0.3.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v0.0.8...v0.1.0
+[0.0.8]: https://github.com/3D-e-Chem/knime-kripodb/compare/v0.0.7...v0.0.8
+[0.0.7]: https://github.com/3D-e-Chem/knime-kripodb/compare/v0.0.6...v0.0.7
+[0.0.6]: https://github.com/3D-e-Chem/knime-kripodb/compare/v0.0.5...v0.0.6
+[0.0.5]: https://github.com/3D-e-Chem/knime-kripodb/compare/v0.0.4...v0.0.5
+[0.0.4]: https://github.com/3D-e-Chem/knime-kripodb/compare/v0.0.3...v0.0.4
+[0.0.3]: https://github.com/3D-e-Chem/knime-kripodb/compare/v0.0.2...v0.0.3
+[0.0.2]: https://github.com/3D-e-Chem/knime-kripodb/compare/v0.0.1...v0.0.2
+[1.0.0]: https://github.com/3D-e-Chem/knime-kripodb/releases/tag/v1.0.0

@@ -14,11 +14,11 @@ KRIPO stands for [Key Representation of Interaction in POckets](http://dx.doi.or
 
 Requirements:
 
-* KNIME, https://www.knime.org, version 4.0 or higher
+- KNIME, https://www.knime.org, version 4.0 or higher
 
 Optionally:
 
-* KripoDB Python package & data files, https://github.com/3D-e-Chem/kripodb,
+- KripoDB Python package & data files, https://github.com/3D-e-Chem/kripodb,
   required to start local running kripo web service instead of the public [one](http://3d-e-chem.vu-compmedchem.nl/kripodb/ui).
 
 Steps to get KripoDB nodes inside KNIME:
@@ -42,7 +42,7 @@ Other workflows using the KripoDB nodes can be found at https://github.com/3D-e-
 
 Development requirements:
 
-* Maven, https://maven.apache.org
+- Maven, https://maven.apache.org
 
 Steps to get development environment setup based on https://github.com/knime/knime-sdk-setup#sdk-setup:
 
@@ -79,16 +79,19 @@ See https://github.com/3D-e-Chem/knime-testflow for more information about workf
 The web service client is generated using [Swagger Code Generator](https://github.com/swagger-api/swagger-codegen) and stored inside `plugin/src/java/nl/esciencecenter/e3dchem/kripodb/ws/client/` directory.
 
 1. Start KripoDB webservice
+
 ```
 kripodb serve data/similarities.frozen.h5 data/fragments.sqlite data/pharmacophores.h5
 ```
 
 2. Download swagger code generator
+
 ```
 wget http://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.2.3/swagger-codegen-cli-2.2.3.jar
 ```
 
 3. Generate a client for KripoDB web service
+
 ```
 java -jar swagger-codegen-cli-2.2.3.jar generate \
 --input-spec http://localhost:8084/kripo/swagger.json \
@@ -98,12 +101,14 @@ java -jar swagger-codegen-cli-2.2.3.jar generate \
 ```
 
 4. Compile client
+
 ```
 cd client
 mvn package
 ```
 
 5. Populate plugin with client source code and dependencies
+
 ```
 mkdir ../plugin/lib
 cp target/lib/gson-* target/lib/logging-interceptor-* target/lib/ok* target/lib/swagger-annotations-* ../plugin/lib/
@@ -120,15 +125,15 @@ cp -r src/main/java/nl/esciencecenter/e3dchem/kripodb/ws/client ../plugin/src/ja
 3. Create package with `mvn package`, will create update site in `p2/target/repository`
 4. Test node by installing it from local update site
 5. Append new release to 3D-e-Chem update site
-  1. Make clone of https://github.com/3D-e-Chem/3D-e-Chem.github.io repo
-  2. Append release to 3D-e-Chem update site with `mvn install -Dtarget.update.site=<3D-e-Chem repo/updates>`
-6. Commit and push changes in this repo and 3D-e-Chem.github.io repo
-7. Create a Github release
-8. Update Zenodo entry
-  1. Correct authors
-  2. To Related/alternate identifiers section add http://dx.doi.org/10.1186/1758-2946-6-S1-O26 as `is cited by this upload` entry.
-9. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
-10. Update CITIATION.cff with new DOI
+6. Make clone of https://github.com/3D-e-Chem/3D-e-Chem.github.io repo
+7. Append release to 3D-e-Chem update site with `mvn install -Dtarget.update.site=<3D-e-Chem repo/updates>`
+8. Commit and push changes in this repo and 3D-e-Chem.github.io repo
+9. Create a Github release
+10. Update Zenodo entry
+11. Correct authors
+12. To Related/alternate identifiers section add http://dx.doi.org/10.1186/1758-2946-6-S1-O26 as `is cited by this upload` entry.
+13. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
+14. Update CITIATION.cff with new DOI
 
 # Create stub recordings for integration tests
 
@@ -136,6 +141,7 @@ The test workflow are tested against a mocked web server and not the actual http
 The mock server is called [WireMock](http://WireMock.org/) and normally gives empty responses.
 To have WireMock server return filled responses, stubs stored in `tests/src/test/resources/` directory must be provided.
 The stubs can be recorded by starting a WireMock server in recording mode by:
+
 ```
 java -jar tests/lib/wiremock-standalone-2.5.0.jar --proxy-all="http://3d-e-chem.vu-compmedchem.nl/" \
 --port=8089 --record-mappings --verbose --root-dir=tests/src/test/resources/
@@ -144,11 +150,12 @@ java -jar tests/lib/wiremock-standalone-2.5.0.jar --proxy-all="http://localhost:
 ```
 
 Then in a KNIME workflow in the KripoDB nodes set the base path to http://localhost:8089.
-Executing the workflow will fetch data from http://3d-e-chem.vu-compmedchem.nl/kripodb  via the WireMock server and cause new stubs to be recorded in the `tests/src/test/resources/` directory.
+Executing the workflow will fetch data from http://3d-e-chem.vu-compmedchem.nl/kripodb via the WireMock server and cause new stubs to be recorded in the `tests/src/test/resources/` directory.
 
 To run the test workflows from inside KNIME desktop enviroment start the WireMock server in mock mode by:
 
 ```
 java -jar tests/lib/wiremock-standalone-2.5.0.jar --port=8089 --verbose --root-dir=tests/src/test/resources/
 ```
+
 Then import the test workflows in `tests/src/knime/` directory, select the workflow in the KNIME explorer and in the context menu (right-click) select `Run as workflow test`.
