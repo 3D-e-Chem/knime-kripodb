@@ -34,8 +34,12 @@ jobs:
       run: mvn -B package
     - name: Run tests
       run: xvfb-run mvn verify -B
-    - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
+    - name: Set up JDK 11 for SonarCloud analysis
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: SonarCloud analysis
+      run: mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
