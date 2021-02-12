@@ -6,6 +6,8 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## Unreleased
 
+## [3.0.0] - 2021-02-12
+
 ## Removed
 
 - Python based nodes in favour of web service nodes ([#25](https://github.com/3D-e-Chem/knime-kripodb/issues/25))
