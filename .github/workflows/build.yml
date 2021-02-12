@@ -63,4 +63,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package
     - name: Run tests
-      run: xvfb-run mvn verify -B
+      run: mvn verify -B
