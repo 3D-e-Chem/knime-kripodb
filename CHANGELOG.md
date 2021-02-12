@@ -1,9 +1,16 @@
 # Change Log
+
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 The file is formatted as described on http://keepachangelog.com/.
 
 ## Unreleased
+
+## [3.0.0] - 2021-02-12
+
+## Removed
+
+- Python based nodes in favour of web service nodes ([#25](https://github.com/3D-e-Chem/knime-kripodb/issues/25))
 
 ## [2.5.0] - 2019-09-25
 
@@ -51,7 +58,7 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ### Added
 
-- Pure Java nodes to fetch fragment information and similarites from web service (#17) 
+- Pure Java nodes to fetch fragment information and similarites from web service (#17)
 
 ## Changed
 
@@ -94,7 +101,7 @@ Retracted due to unresolved compilation problems.
 
 - Nest Kripo nodes under /community/3D-e-Chem (#7)
 
-## [2.1.0] - 2016-07-14 
+## [2.1.0] - 2016-07-14
 
 ### Added
 
@@ -163,3 +170,23 @@ Version >= 2.0.0 uses KripoDB Knime node which have there own dialog with combo 
 
 - Python templates to use KripoDB package
 - Example workflow on Github repo.
+
+[unreleased]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.5.0...HEAD
+[2.5.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.4.2...v2.5.0
+[2.4.2]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.3.1...v2.4.2
+[2.4.1]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.3.0...v2.3.1
+[2.3.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.2.1...v2.3.0
+[2.2.1]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.2.0...v2.2.1
+[2.2.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.1.5...v2.2.0
+[2.1.5]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.1.4...v2.1.5
+[2.1.4]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.1.3...v2.1.4
+[2.1.3]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.1.2...v2.1.3
+[2.1.2]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.1.1...v2.1.2
+[2.1.1]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.1.0...v2.1.1
+[2.1.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.0.1...v2.1.0
+[2.0.1]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.0.0...v2.0.1
+[2.0.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v1.0.3...v2.0.0
+[1.0.3]: https://github.com/3D-e-Chem/knime-kripodb/compare/v1.0.2...v1.0.3
+[1.0.2]: https://github.com/3D-e-Chem/knime-kripodb/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/3D-e-Chem/knime-kripodb/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/3D-e-Chem/knime-kripodb/releases/tag/v1.0.0
