@@ -1,6 +1,6 @@
 # YAML 1.2
 # Metadata for citation of this software according to the CFF format (https://citation-file-format.github.io/)
-cff-version: 1.0.3
+cff-version: 1.2.0
 message: If you use this software, please cite it as below.
 title: KNIME node for Key Representation of Interaction in POckets (KRIPO)
 doi: 10.5281/zenodo.597262
