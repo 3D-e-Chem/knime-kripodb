@@ -2,7 +2,7 @@
 <feature
       id="nl.esciencecenter.e3dchem.kripodb.feature"
       label="KripoDB nodes for KNIME"
-      version="3.0.0.qualifier"
+      version="3.0.1.qualifier"
       provider-name="Netherlands eScience Center">
 
    <description url="https://github.com/3D-e-Chem/knime-kripodb">
