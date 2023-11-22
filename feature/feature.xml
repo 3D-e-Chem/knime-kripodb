@@ -695,6 +695,10 @@ Public License instead of this License.  But first, please read
       <discovery label="KripoDB" url="https://github.com/3D-e-Chem/kripodb"/>
    </url>
 
+   <requires>
+      <import feature="org.rdkit.knime.binaries.feature" version="0.0.0"/>
+   </requires>
+
    <plugin
          id="nl.esciencecenter.e3dchem.kripodb.plugin"
          download-size="0"
