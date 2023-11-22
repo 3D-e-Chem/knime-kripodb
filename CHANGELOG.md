@@ -6,9 +6,15 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## Unreleased
 
+## [3.0.1] - 2023-11-22
+
+### Changed
+
+- Require KNIME 5.1
+
 ## [3.0.0] - 2021-02-12
 
-## Removed
+### Removed
 
 - Python based nodes in favour of web service nodes ([#25](https://github.com/3D-e-Chem/knime-kripodb/issues/25))
 
@@ -171,7 +177,9 @@ Version >= 2.0.0 uses KripoDB Knime node which have there own dialog with combo 
 - Python templates to use KripoDB package
 - Example workflow on Github repo.
 
-[unreleased]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.5.0...HEAD
+[unreleased]: https://github.com/3D-e-Chem/knime-kripodb/compare/v3.0.1...HEAD
+[2.5.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v3.0.0...v3.0.1
+[2.5.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.5.0...v3.0.0
 [2.5.0]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.4.2...v2.5.0
 [2.4.2]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.3.1...v2.4.2
 [2.4.1]: https://github.com/3D-e-Chem/knime-kripodb/compare/v2.3.0...v2.3.1

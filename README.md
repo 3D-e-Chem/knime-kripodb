@@ -5,15 +5,15 @@ KRIPO stands for [Key Representation of Interaction in POckets](http://dx.doi.or
 [KNIME](http://www.knime.org) nodes for KripoDB (https://github.com/3D-e-Chem/kripodb).
 
 [![Java CI with Maven](https://github.com/3D-e-Chem/knime-kripodb/workflows/Java%20CI%20with%20Maven/badge.svg)](https://github.com/3D-e-Chem/knime-kripodb/actions?query=workflow%3A%22Java+CI+with+Maven%22)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb&metric=alert_status)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb&metric=coverage)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.kripodb%3Anl.esciencecenter.e3dchem.kripodb)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=3D-e-Chem_knime-kripodb&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=3D-e-Chem_knime-kripodb)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=3D-e-Chem_knime-kripodb&metric=coverage)](https://sonarcloud.io/summary/new_code?id=3D-e-Chem_knime-kripodb)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597262.svg)](https://doi.org/10.5281/zenodo.597262)
 
 # Installation
 
 Requirements:
 
-- KNIME, https://www.knime.org, version 4.0 or higher
+- KNIME, https://www.knime.org, version 5.1 or higher
 
 Optionally:
 
@@ -24,7 +24,7 @@ Steps to get KripoDB nodes inside KNIME:
 
 1. Goto Help > Install new software ... menu
 2. Press add button
-3. Fill text fields with `https://3d-e-chem.github.io/updates`
+3. Fill text fields with `https://3d-e-chem.github.io/updates/5.1`
 4. Select --all sites-- in work with pulldown
 5. Open KNIME 3D-e-Chem Contributions folder
 6. Select KripoDB
@@ -45,11 +45,11 @@ Development requirements:
 
 Steps to get development environment setup based on https://github.com/knime/knime-sdk-setup#sdk-setup:
 
-1. Install Java 8
-2. Install Eclipse for [RCP and RAP developers](https://www.eclipse.org/downloads/packages/release/2018-12/r/eclipse-ide-rcp-and-rap-developers)
-3. Configure Java 8 inside Eclipse Window > Preferences > Java > Installed JREs
+1. Install Java 17
+2. Install Eclipse for [RCP and RAP developers](https://www.eclipse.org/downloads/packages/installer)
+3. Configure Java 17 inside Eclipse Window > Preferences > Java > Installed JREs
 4. Import this repo as an Existing Maven project
-5. Activate target platform by going to Window > Preferences > Plug-in Development > Target Platform and check the `KNIME Analytics Platform (4.0) - nl.esciencecenter.e3dchem.kripodb.targetplatform/KNIME-AP-4.0.target` target definition.
+5. Activate target platform by going to Window > Preferences > Plug-in Development > Target Platform and check the `KNIME Analytics Platform (5.1) - nl.esciencecenter.e3dchem.kripodb.targetplatform/KNIME-AP-5.1.target` target definition.
 6. A KNIME Analytics Platform instance can be started by right clicking on the `targetplatform/KNIME\ Analytics\ Platform.launch` file and selecting `Run As → KNIME Analytics Platform`. The KNIME instance will contain the target platform together with all extensions defined in the workspace.
 
 During import the Tycho Eclipse providers must be installed.
