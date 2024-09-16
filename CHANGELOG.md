@@ -6,6 +6,10 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## Unreleased
 
+## [3.0.2] - 2024--9-16
+
+- Require rdkit >5.1.0
+
 ## [3.0.1] - 2023-11-22
 
 ### Changed
